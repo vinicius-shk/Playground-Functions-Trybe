@@ -39,8 +39,46 @@ return true;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(stringBebidas) {
+  let contadorAgua = 0;
+  for(let key in stringBebidas) {
+    switch (stringBebidas[key]) {
+      case "1":
+       contadorAgua += 1;
+       break;
+      case "2":
+       contadorAgua += 2;
+        break;
+      case "3":
+        contadorAgua += 3;
+        break;
+      case "4":
+        contadorAgua += 4;
+        break;
+      case "5":
+        contadorAgua += 5;
+        break;
+      case "6":
+        contadorAgua += 6;
+        break;
+      case "7":
+        contadorAgua += 7;
+        break;
+      case "8":
+        contadorAgua += 8;
+        break;
+      case "9":
+        contadorAgua += 9;
+        break;
+
+      default:
+        break;
+    }
+  }
+if(contadorAgua === 1) {
+  return contadorAgua + " copo de água";
+}
+return contadorAgua + " copos de água";
 }
 
 module.exports = {
