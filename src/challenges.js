@@ -66,8 +66,20 @@ return "os gatos trombam e o rato foge";
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumeros) {
+  let arrayRetorno = [];
+  for(let key in arrayNumeros) {
+    if(arrayNumeros[key] % 3 === 0 && arrayNumeros[key] % 5 === 0) {
+      arrayRetorno.push("fizzBuzz");
+    } else if(arrayNumeros[key] % 3 === 0 && arrayNumeros[key] % 5 !== 0) {
+      arrayRetorno.push("fizz");
+    } else if(arrayNumeros[key] % 3 !== 0 && arrayNumeros[key] % 5 === 0) {
+      arrayRetorno.push("buzz");
+    } else {
+      arrayRetorno.push("bug!");
+    }
+  }
+  return arrayRetorno;
 }
 
 // Desafio 9
