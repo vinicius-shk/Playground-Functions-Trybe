@@ -39,8 +39,20 @@ return (wins * 3) + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumeros) {
+  let maiorNumero = arrayNumeros[0];
+  let contador = 0;
+  for(let key1 in arrayNumeros) {
+    if(arrayNumeros[key1] > maiorNumero) {
+      maiorNumero = arrayNumeros[key1];
+    }
+  }
+  for(let key3 in arrayNumeros) {
+    if(arrayNumeros[key3] === maiorNumero) {
+      contador += 1;
+    }
+  }
+  return contador;
 }
 
 // Desafio 7
